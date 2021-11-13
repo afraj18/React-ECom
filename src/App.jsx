@@ -1,3 +1,4 @@
+// import Product from "./pages/Product";
 import Home from "./pages/Home";
 
 const App = () => {
