@@ -1,3 +1,4 @@
+import { Add, Remove } from '@material-ui/icons';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
@@ -62,6 +63,42 @@ const FilterSize = styled.select`
 `
 const FilterSizeOption = styled.option``
 
+const AddContainer = styled.div`
+    width:50%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    
+`
+const AmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+`
+
+const Amount = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 5px;
+`
+const Button = styled.button`
+    padding:10px;
+    border:1px solid teal;
+    background:white;
+    cursor:pointer;
+   
+    &:hover{
+        background-color: #f8f4f4;
+    }
+`
+
+
+
 
 
 const Product = () => {
@@ -95,6 +132,14 @@ const Product = () => {
                             </FilterSize>
                         </Filter>
                     </FilterContainer>
+                    <AddContainer>
+                        <Remove />
+                        <AmountContainer>
+                            <Amount>1</Amount>
+                        </AmountContainer>
+                        <Add />
+                        <Button>Add to Cart</Button>
+                    </AddContainer>
 
 
                 </InfoContainer>
