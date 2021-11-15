@@ -1,11 +1,83 @@
-import React from 'react'
+import styled from 'styled-components';
+
+const Container = styled.div`
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url("https://i.ibb.co/HdVCRmy/mike-petrucci-c9-FQyq-IECds-unsplash.jpg")
+        center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+`
+const Wrapper = styled.div`
+    width:40%;
+    padding: 20px;
+    Background:white;
+    border-radius:20px;
+`
+const Title = styled.h1`
+    font-size:25px;
+    font-weight:300;
+`
+const Form = styled.form`
+    display: flex;
+    flex-wrap: wrap;
+
+`
+const Input = styled.input`
+    min-width:40%;
+    margin :20px 10px 0px 0px;
+    flex:1;
+    padding :10px;
+
+`
+const Agreement = styled.span`
+     margin :20px 10px;
+     font-size:15px;
+`
+const Button = styled.button`
+    width:40%;
+    font-size:16px;
+    background:teal;
+    border:none;
+    border-radius:2%;
+    color:white;
+    cursor:pointer;
+    padding: 15px 20px;
+
+`
 
 const Register = () => {
     return (
-        <div>
+        <Container>
+            <Wrapper>
+                <Title>Create an account</Title>
+                <Form>
+                    <Input placeholder="First Name" />
+                    <Input placeholder="Last Name" />
+                    <Input placeholder="Username" />
+                    <Input placeholder="Password" />
+                    <Input placeholder="Confirm Password" />
 
-        </div>
+
+                    <Agreement>By creating an account, I consent to the processing of my personal
+                        data in accordance with the <b>PRIVACY POLICY</b>
+                    </Agreement>
+                    <Button>Create Account</Button>
+                </Form>
+            </Wrapper>
+        </Container>
     )
 }
 
 export default Register
+
+
