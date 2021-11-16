@@ -3,6 +3,7 @@ import styled from "styled-components"
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { sliderItems } from '../data';
+import { mobile } from '../responsive'
 
 const Container = styled.div`
     width:100%;
@@ -10,6 +11,8 @@ const Container = styled.div`
     overflow:hidden;
     display:flex;
     position:relative;
+    ${mobile({ display: "none" })}
+
 `
 const Arrow = styled.div`
     width:50px;
